@@ -1,10 +1,4 @@
 ---
-project:
-  output-dir: docs
-
-website:
-  title: "AI's Linguistic Fingerprint"
-  page-navigation: true
 
 title: "AI's Linguistic Fingerprint: <br> [Key Stylistic Differences between AI-Generated Text and Human Writing]{.small_h}"
 author: "Ben Markey"
@@ -14,6 +8,12 @@ title-slide-attributes:
     data-background-opacity: "0.5"
 embed-resources: true
 self-contained-math: true
+project: 
+    type: presentation
+    output-dir: docs
+website:
+    title: "AI's Linguistic Fingerprint"
+    page-navigation: true
 format:
     revealjs:
         css: "custom.css"
