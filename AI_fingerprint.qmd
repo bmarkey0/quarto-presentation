@@ -1,4 +1,11 @@
 ---
+project:
+  output-dir: docs
+
+website:
+  title: "AI's Linguistic Fingerprint"
+  page-navigation: true
+
 title: "AI's Linguistic Fingerprint: <br> [Key Stylistic Differences between AI-Generated Text and Human Writing]{.small_h}"
 author: "Ben Markey"
 institute: Carnegie Mellon University
