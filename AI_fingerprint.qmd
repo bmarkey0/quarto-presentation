@@ -1,0 +1,258 @@
+---
+title: "AI's Linguistic Fingerprint: <br> [Key Stylistic Differences between AI-Generated Text and Human Writing]{.small_h}"
+author: "Ben Markey"
+institute: Carnegie Mellon University
+title-slide-attributes:
+    data-background-image: /AI_fingerprint_files/figs/background.png
+    data-background-opacity: "0.5"
+embed-resources: true
+self-contained-math: true
+format:
+    revealjs:
+        css: "custom.css"
+        theme: simple
+        transition: none
+        slide-number: true
+        progress: true
+        filters: 
+            - highlight-text
+        lightbox: true
+
+
+---
+
+## A little bit of forecasting
+
+1. Contextualizing this research
+2. A brief overview of LLMs
+3. Linguistic differences between humans and AI
+
+---
+
+## Part 1: Contextualizing Research
+
+## This work comes from an interdisciplinary research group of statisticians and linguists 
+
+::: columns
+::: {.column width="50%"}
+![TeachStat Website, where you can find publications and accessible visuals](/AI_fingerprint_files/figs/teachstat_qr.png)
+:::
+
+::: {.column width="50%"}
+Since late 2022, our work has largely focused on AI writing patterns across different genres. 
+
+
+::: 
+:::
+
+---
+
+## Part 2: A Brief Overview of LLMs
+
+## With some fancy math, context windows help establish numerical representations of word meaning{.small_h}
+
+![](/AI_fingerprint_files/figs/context_window.png){width="80%"}
+
+<!--
+## The results of this fancy math are called embeddings, numerical representations of semantic content.{.small_h}
+
+::: columns
+::: {.column width="30%"}
+<br>
+**cat** =[[1.5, -0.4, 7.2, 19.6]{.embeddings}] 
+<br>
+<br>
+**dog** = [[1.7, -0.3, 6.9, 19.1]{.embeddings}] <br>
+<br>
+**apple** = [[-5.2, 3.1, 0.2, 8.1]{.embeddings}] <br>
+<br>
+**kiwi** = [[-4.9, 3.6, 0.9, 7.8]{.embeddings}] <br>
+<br>
+**car** = [[81.6, -72.1, 16, -8.2]{.embeddings}] <br>
+:::
+
+:::{.column width="70%"}
+
+```{python}
+#| fig-width: 3
+#| fig-height: 1
+
+import matplotlib.pyplot as plt
+
+x = [1.5, 1.7, -5.2, -4.9]
+y = [-0.4, -0.3, 3.1, 3.6]
+labels = ["cat", "dog", "apple", "kiwi"]
+
+
+plt.scatter(x, y, marker="s")
+
+for i in range(len(x)):
+    plt.text(x[i] - 0.1, y[i] + 0.1, labels[i], fontsize=8)
+```
+:::
+:::
+-->
+## Once the model is up and running, engineers fine-tune it for specific tasks{.small_h} 
+
+![](/AI_fingerprint_files/figs/Pre-training%20and%20fine-tuning.png)
+
+<!--
+## LLM development, 1890s to 1980s{.small_h}
+
+![[Timeline of developments from late 19th century to the 1980s. Intellectual developments are above the timeline, while technological advancements are below. ]{.caption}](/AI_fingerprint_files/figs/LLM_timeline_pt1_1.png){width="80%"}
+
+## LLM development, 1890s to 1980s{.small_h}
+
+![[Timeline of developments from late 19th century to the 1980s. Intellectual developments are above the timeline, while technological advancements are below. ]{.caption}](/AI_fingerprint_files/figs/LLM_timeline_pt1_2.png){width="80%"}
+
+## LLM development, 1890s to 1980s{.small_h}
+
+![[Timeline of developments from late 19th century to the 1980s. Intellectual developments are above the timeline, while technological advancements are below. ]{.caption}](/AI_fingerprint_files/figs/LLM_timeline_pt1_3.png){width="80%"}
+
+## LLM development, 1890s to 1980s{.small_h}
+
+![[Timeline of developments from late 19th century to the 1980s. Intellectual developments are above the timeline, while technological advancements are below. ]{.caption}](/AI_fingerprint_files/figs/LLM_timeline_pt1_4.png){width="80%"}
+
+## LLM development, 1890s to 1980s{.small_h}
+
+![[Timeline of developments from late 19th century to the 1980s. Intellectual developments are above the timeline, while technological advancements are below. ]{.caption}](/AI_fingerprint_files/figs/LLM_timeline_pt1_5.png){width="80%"}
+
+
+## Timeline of LLM development, 1990 to now{.small_h}
+
+![[Timeline of developments from 1990 to present. Intellectual developments are above the timeline, while technological advancements are below. ]{.caption}](/AI_fingerprint_files/figs/LLM_timeline_pt2_1.png){width="80%"}
+
+## Timeline of LLM development, 1990 to now{.small_h}
+
+![[Timeline of developments from 1990 to present. Intellectual developments are above the timeline, while technological advancements are below. ]{.caption}](/AI_fingerprint_files/figs/LLM_timeline_pt2_2.png){width="80%"}
+
+## Timeline of LLM development, 1990 to now{.small_h}
+
+![[Timeline of developments from 1990 to present. Intellectual developments are above the timeline, while technological advancements are below. ]{.caption}](/AI_fingerprint_files/figs/LLM_timeline_pt2_3.png){width="80%"}
+
+## Timeline of LLM development, 1990 to now{.small_h}
+
+![[Timeline of developments from 1990 to present. Intellectual developments are above the timeline, while technological advancements are below. ]{.caption}](/AI_fingerprint_files/figs/LLM_timeline_pt2_4.png){width="80%"}
+
+## Timeline of LLM development, 1990 to now{.small_h}
+
+![[Timeline of developments from 1990 to present. Intellectual developments are above the timeline, while technological advancements are below. ]{.caption}](/AI_fingerprint_files/figs/LLM_timeline_pt2_5.png){width="80%"}
+
+## Timeline of LLM development, 1990 to now{.small_h}
+
+![[Timeline of developments from 1990 to present. Intellectual developments are above the timeline, while technological advancements are below. ]{.caption}](/AI_fingerprint_files/figs/LLM_timeline_pt2_6.png){width="80%"}
+-->
+## Part 3: Salient differences between human writing and AI-genefared text
+
+##  AI-generated prose is informationally dense 
+<br>
+By closely analyzing the language features, narrative structures, and communication strategies employed in these genres, we aim to discern how they reflect the values, goals, and reading purposes of their respective discourse communities, offering valuable insights into the role of language in shaping public understanding and academic inquiry in the realm of social media.
+
+## [AI-generated prose is informationally dense]{.small_h} 
+<br>
+By closely analyzing the language [features]{bg-color="#D8DBCE"}, narrative [structures]{bg-color="#D8DBCE"}, and communication [strategies]{bg-color="#D8DBCE"} employed in these genres, we aim to discern how they reflect the [values]{bg-color="#D8DBCE"}, [goals]{bg-color="#D8DBCE"}, and reading [purposes]{bg-color="#D8DBCE"} of their respective discourse communities, offering valuable [insights]{bg-color="#D8DBCE"} into the role of language in shaping public understanding and academic inquiry in the realm of social media.
+
+<br>
+
+**Key**: [head noun]{bg-color="#D8DBCE"}
+
+## [AI-generated prose is informationally dense]{.small_h}
+<br>
+By closely analyzing the language [features]{bg-color="#D8DBCE"}, narrative [structures]{bg-color="#D8DBCE"}, and communication [strategies]{bg-color="#D8DBCE"} employed in these [genres]{bg-color="#DBCED8"}, we aim to discern how they reflect the [values]{bg-color="#D8DBCE"}, [goals]{bg-color="#D8DBCE"}, and reading [purposes]{bg-color="#D8DBCE"} of their respective discourse [communities]{bg-color="#DBCED8"}, offering valuable [insights]{bg-color="#D8DBCE"} into the [role]{bg-color="#DBCED8"} of [language]{bg-color="#DBCED8"} in shaping public [understanding]{bg-color="#DBCED8"} and academic [inquiry]{bg-color="#DBCED8"} in the [realm]{bg-color="#DBCED8"} of social [media]{bg-color="#DBCED8"}.
+
+<br>
+
+**Key**: [head noun]{bg-color="#D8DBCE"}, [object of prepositional phrase]{bg-color="#DBCED8"}
+
+## [AI-generated prose is informationally dense]{.small_h}
+<br>
+By closely analyzing the [language]{bg-color="#CEDBD1"} [features]{bg-color="#D8DBCE"}, [narrative]{bg-color="#CEDBD1"} [structures]{bg-color="#D8DBCE"}, and [communication]{bg-color="#CEDBD1"} [strategies]{bg-color="#D8DBCE"} employed in these [genres]{bg-color="#DBCED8"}, we aim to discern how they reflect the [values]{bg-color="#D8DBCE"}, [goals]{bg-color="#D8DBCE"}, and [reading]{bg-color="#CEDBD1"} [purposes]{bg-color="#D8DBCE"} of their respective [discourse]{bg-color="#CEDBD1"} [communities]{bg-color="#DBCED8"}, offering valuable [insights]{bg-color="#D8DBCE"} into the [role]{bg-color="#DBCED8"} of [language]{bg-color="#DBCED8"} in shaping public [understanding]{bg-color="#DBCED8"} and academic [inquiry]{bg-color="#DBCED8"} in the [realm]{bg-color="#DBCED8"} of social [media]{bg-color="#DBCED8"}.
+
+<br>
+
+**Key**: [head noun]{bg-color="#D8DBCE"}, [object of prepositional phrase]{bg-color="#DBCED8"}, [prenominals]{bg-color="#CEDBD1"}
+
+## [AI-generated prose is informationally dense]{.small_h}
+<br>
+
+By closely analyzing the [language]{bg-color="#CEDBD1"} [features]{bg-color="#D8DBCE"}, [narrative]{bg-color="#CEDBD1"} [structures]{bg-color="#D8DBCE"}, and [communication]{bg-color="#CEDBD1"} [strategies]{bg-color="#D8DBCE"} employed in these [genres]{bg-color="#DBCED8"}, we aim to discern how they reflect the [values]{bg-color="#D8DBCE"}, [goals]{bg-color="#D8DBCE"}, and [reading]{bg-color="#CEDBD1"} [purposes]{bg-color="#D8DBCE"} of their [respective]{bg-color="#D1CEDB"} [discourse]{bg-color="#CEDBD1"} [communities]{bg-color="#DBCED8"}, offering [valuable]{bg-color="#D1CEDB"} [insights]{bg-color="#D8DBCE"} into the [role]{bg-color="#DBCED8"} of [language]{bg-color="#DBCED8"} in shaping [public]{bg-color="#D1CEDB"} [understanding]{bg-color="#DBCED8"} and [academic]{bg-color="#D1CEDB"} [inquiry]{bg-color="#DBCED8"} in the [realm]{bg-color="#DBCED8"} of [social]{bg-color="#D1CEDB"} [media]{bg-color="#DBCED8"}.
+
+<br>
+
+**Key**: [head noun]{bg-color="#D8DBCE"}, [object of prepositional phrase]{bg-color="#DBCED8"}, [prenominal]{bg-color="#CEDBD1"}, [attributive adjective]{bg-color="#D1CEDB"}
+<!--
+## 
+
+[By]{color="#FFFFFF"} [closely analyzing the]{color="#FFFFFF"} [language]{color="#CEDBD1" bg-color="#CEDBD1"} [features]{color="#D8DBCE" bg-color="#D8DBCE"} [narrative]{color="#CEDBD1" bg-color="#CEDBD1"} [structures]{color="#D8DBCE" bg-color="#D8DBCE"} [and]{color="#FFFFFF"} [communication]{color="#CEDBD1" bg-color="#CEDBD1"} [strategies]{color="#D8DBCE" bg-color="#D8DBCE"} [employed in these]{color="#FFFFFF"} [genres]{color="#D8DBCE" bg-color="#D8DBCE"} [we aim to discern how they reflect the]{color="#FFFFFF"} [values]{color="#D8DBCE" bg-color="#D8DBCE"} [goals]{color="#D8DBCE" bg-color="#D8DBCE"} [and]{color="#FFFFFF"} [reading]{color="#CEDBD1" bg-color="#CEDBD1"} [purposes]{color="#D8DBCE" bg-color="#D8DBCE"} [of their]{color="#FFFFFF"} [respective]{color="#D1CEDB" bg-color="#D1CEDB"} [discourse]{color="#CEDBD1" bg-color="#CEDBD1"} [communities]{color="#D8DBCE" bg-color="#D8DBCE"} [offering]{color="#FFFFFF"} [valuable]{color="#D1CEDB" bg-color="#D1CEDB"} [insights]{color="#D8DBCE" bg-color="#D8DBCE"} [into the]{color="#FFFFFF"} [role]{color="#D8DBCE" bg-color="#D8DBCE"} [of]{color="#FFFFFF"}[language]{color="#D8DBCE" bg-color="#D8DBCE"} [in]{color="#FFFFFF"} [shaping]{color="#DBCED8" bg-color="#DBCED8"} [public]{color="#D1CEDB" bg-color="#D1CEDB"} [understanding]{color="#D8DBCE" bg-color="#D8DBCE"} [and]{color="#FFFFFF"} [academic]{color="#D1CEDB" bg-color="#D1CEDB"} [inquiry]{color="#D8DBCE" bg-color="#D8DBCE"} [in]{color="#FFFFFF"} [the]{color="#FFFFFF"} [realm]{color="#D8DBCE" bg-color="#D8DBCE"} [of]{color="#FFFFFF"} [social]{color="#D1CEDB" bg-color="#D1CEDB"} [media]{color="#D8DBCE" bg-color="#D8DBCE"}
+[By]{color="#FFFFFF"} [closely analyzing the]{color="#FFFFFF"} [language]{color="#CEDBD1" bg-color="#CEDBD1"} [features]{color="#D8DBCE" bg-color="#D8DBCE"} [narrative]{color="#CEDBD1" bg-color="#CEDBD1"} [structures]{color="#D8DBCE" bg-color="#D8DBCE"} [and]{color="#FFFFFF"} [communication]{color="#CEDBD1" bg-color="#CEDBD1"} [strategies]{color="#D8DBCE" bg-color="#D8DBCE"} [employed in these]{color="#FFFFFF"} [genres]{color="#D8DBCE" bg-color="#D8DBCE"} [we aim to discern how they reflect the]{color="#FFFFFF"} [values]{color="#D8DBCE" bg-color="#D8DBCE"} [goals]{color="#D8DBCE" bg-color="#D8DBCE"} [and]{color="#FFFFFF"} [reading]{color="#CEDBD1" bg-color="#CEDBD1"} [purposes]{color="#D8DBCE" bg-color="#D8DBCE"} [of their]{color="#FFFFFF"} [respective]{color="#D1CEDB" bg-color="#D1CEDB"} [discourse]{color="#CEDBD1" bg-color="#CEDBD1"} [communities]{color="#D8DBCE" bg-color="#D8DBCE"} [offering]{color="#FFFFFF"} [valuable]{color="#D1CEDB" bg-color="#D1CEDB"} [insights]{color="#D8DBCE" bg-color="#D8DBCE"} [into the]{color="#FFFFFF"} [role]{color="#D8DBCE" bg-color="#D8DBCE"} [of]{color="#FFFFFF"} [language]{color="#D8DBCE" bg-color="#D8DBCE"} [in]{color="#FFFFFF"} [shaping]{color="#DBCED8" bg-color="#DBCED8"} [public]{color="#D1CEDB" bg-color="#D1CEDB"} [understanding]{color="#D8DBCE" bg-color="#D8DBCE"} [and]{color="#FFFFFF"} [academic]{color="#D1CEDB" bg-color="#D1CEDB"} [inquiry]{color="#D8DBCE" bg-color="#D8DBCE"} [in]{color="#FFFFFF"} [the]{color="#FFFFFF"} [realm]{color="#D8DBCE" bg-color="#D8DBCE"} [of]{color="#FFFFFF"} [social]{color="#D1CEDB" bg-color="#D1CEDB"} [media]{color="#D8DBCE" bg-color="#D8DBCE"}
+-->
+
+## [The information density in academic writing is different in degree, not kind.]{.small_h}
+
+<br>
+The [reduction]{bg-color="#D8DBCE"} in [global]{bg-color="#D1CEDB"} [mortality]{bg-color="#DBCED8"} associated with [vaccinations]{bg-color="#DBCED8"} is [second]{bg-color="#D8DBCE"} only to the [introduction]{bg-color="#D8DBCE"} of [safe]{bg-color="#D1CEDB"} [drinking]{bg-color="#D1CEDB"} [water]{bg-color="#DBCED8"}. According to the World Health Organization, [childhood]{bg-color="#CEDBD1"} [vaccinations]{bg-color="#D8DBCE"} prevent an estimated 2–3million [deaths]{bg-color="#D8DBCE"} per [year]{bg-color="#DBCED8"}. Yet despite [global]{bg-color="#D1CEDB"} [increases]{bg-color="#D8DBCE"} in [childhood]{bg-color="#CEDBD1"} [vaccine]{bg-color="#CEDBD1"} [uptake]{bg-color="#DBCED8"}, [rates]{bg-color="#D8DBCE"} remain sub-optimal (<95%) with [vaccine-preventable]{bg-color="#D1CEDB"} [diseases]{bg-color="#D8DBCE"} still posing a [public]{bg-color="#D1CEDB"} [health]{bg-color="#CEDBD1"} [risk]{bg-color="#D8DBCE"}.
+
+<br>
+
+**Key**: [head noun]{bg-color="#D8DBCE"}, [object of prepositional phrase]{bg-color="#DBCED8"}, [prenominal]{bg-color="#CEDBD1"}, [attributive adjective]{bg-color="#D1CEDB"}
+
+## It isn't just about nouns though. Look at how repetition helps this passage cohere. 
+<br>
+
+The reduction in global mortality associated with [vaccinations]{bg-color="#D8DBCE"} is second only to the introduction of safe drinking water. According to the World Health Organisation, childhood [vaccinations]{bg-color="#D8DBCE"} prevent an estimated 2–3million deaths per year. Yet despite global increases in childhood [vaccine]{bg-color="#D8DBCE"} uptake, rates remain sub-optimal (<95%), with [vaccine-preventable]{bg-color="#D8DBCE"} diseases still posing a public health risk.
+
+
+## It isn't just about nouns though. Look at how repetition helps this passage cohere. 
+ <br>
+ The reduction in [global]{bg-color="#DBCED8"} mortality associated with [vaccinations]{bg-color="#D8DBCE"} is second only to the introduction of safe drinking water. According to the World Health Organisation, [childhood]{bg-color="#D1CEDB"} [vaccinations]{bg-color="#D8DBCE"} prevent an estimated 2–3million deaths per year. Yet despite [global]{bg-color="#DBCED8"} increases in [childhood]{bg-color="#D1CEDB"} [vaccine]{bg-color="#D8DBCE"} uptake, rates remain sub-optimal (<95%), with [vaccine-preventable]{bg-color="#D8DBCE"} diseases still posing a public health risk.
+
+## Writers also concretize abstractions to build cohesion
+<br>
+[The reduction in global mortality associated with vaccinations]{bg-color="#D8DBCE"} is second only to the introduction of safe drinking water. According to the World Health Organisation, childhood vaccinations prevent an estimated 2–3million deaths per year. Yet despite [global increases in childhood vaccine uptake]{bg-color="#D8DBCE"}, rates remain sub-optimal (<95%), with vaccine-preventable diseases still posing a public health risk.
+
+## Writers also concretize abstractions to build cohesion
+<br>
+[The reduction in global mortality associated with vaccinations]{bg-color="#D8DBCE"} is second only to the introduction of safe drinking water. According to the World Health Organisation, childhood vaccinations [prevent an estimated 2–3million deaths per year]{bg-color="#DBCED8"}. Yet despite [global increases in childhood vaccine uptake]{bg-color="#D8DBCE"}, rates remain sub-optimal (<95%), with vaccine-preventable diseases still posing a public health risk.
+
+## GPT does not employ any of these features
+<br>
+By closely analyzing the language features, narrative structures, and communication strategies employed in these genres, we aim to discern how they reflect the values, goals, and reading purposes of their respective discourse communities, offering valuable insights into the role of language in shaping public understanding and academic inquiry in the realm of social media.
+
+## These differences exist at-scale and across genres.
+
+
+![[More positive groups contain features used in speech. More negative groups contain features used to academic writing. From Markey et al. (2024)]{.caption}](/AI_fingerprint_files/figs/stick_plot.png){width="3in"}
+
+
+## These differences help distinguish among AI-generated and human authored texts. 
+
+![[Projection of the student, published, and ChatGPT-generated writing onto the first two linear discriminants, based on the 67 Biber features. From Deluca et al. (2025)]{.caption}](/AI_fingerprint_files/figs/deluca.png)
+
+## LLMs also use words at different rates relative to humans
+
+![[Rates of word use by different LLMs compared to the human use of each word. Red line is the human rate, while the blue line is 10x and 1/10x. From Reinhart et al. (2025)]{.caption}](/AI_fingerprint_files/figs/word_frequency.png){width="60%"}
+
+## [These differences appear to be introduced in the fine-tuning stage]{.small_h}
+
+![[Rates of features relative to humans. From Reinhart et al. (2025)]{.caption}](/AI_fingerprint_files/figs/llms-1400x700.jpg){width="55%"}
+
+## Unsurprisingly, we see student writing drifting toward a generated style
+
+![[Yearly text analysis of student papers in statistics compared to GPT4o. From Franke and Colando (2025)]{.caption}](AI_fingerprint_files/figs/yearly_change.png){width="95%"}
+
+
+
+
+
+## Works Cited
+<br>
+[Colando, S. and and Franke, E. “Analyzing Statistics Students’ Writing Before and After the Emergence of Large Language Models.” Poster, US Conference on Teaching Statistics Research Satellite, July 2025.]{.citation}
+
+
+[Deluca, L., Reinhart, A., Weinberg, G., Laudenbach, M., Miller, S., and Brown, D. W. (2025). Developing students’ statistical expertise through writing in the age of AI. *Journal of Statistics Education*, 33(3), 266–278.]{.citation} 
+
+
+[Markey, B., Brown, D. W., Laudenbach, M., and Kohler, A. (2024). Dense and disconnected: Analyzing the sedimented style of ChatGPT-generated text at scale. *Written Communication*, 41(7), 571-600.]{.citation}
+
+
+[Reinhart, A., Markey, B., Laudenbach, M., Pantusen, K., Yurko, R., Weinberg, G., & Brown, D. W. (2025). Do llms write like humans? variation in grammatical and rhetorical styles. *Proceedings from the National Academy of Sciences*, 122,e2422455122.]{.citation} 
